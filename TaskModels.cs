@@ -1,13 +1,49 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
+
 
 namespace TaskModels
 {
-    // CREATE TABLE Task1NumbersTable (Id INT IDENTITY(1,1) PRIMARY KEY, Value INT UNIQUE); 
     [Index(nameof(Value), IsUnique = true)]
     public class Task1Number
     {
+        [Key]
         public int Id { get; set; }
+        [Required]
         public int Value { get; set; }
+    }
+
+    public class Task4Number
+    {
+        [Key]
+        public int Id { get; set; }
+        [Required]
+        public int Value { get; set; }
+    }
+
+    public class Task5Symbol
+    {
+        [Key]
+        public int Id { get; set; }
+        [Required]
+        public string Value { get; set; }
+    }
+
+    [Index(nameof(Value), IsUnique = true)]
+    public class Task6Date
+    {
+        [Key]
+        public int Id { get; set; }
+        [Required]
+        public DateTime Value { get; set; }
+    }
+
+    public class Task8String
+    {
+        [Key]
+        public int Id { get; set; }
+        [Required]
+        public string Value { get; set; }
     }
 }
