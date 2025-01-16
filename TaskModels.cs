@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 
-namespace TaskModels
+namespace TaskSolver.Models
 {
     public class TaskBaseSingleValue<T>{
         [Key]

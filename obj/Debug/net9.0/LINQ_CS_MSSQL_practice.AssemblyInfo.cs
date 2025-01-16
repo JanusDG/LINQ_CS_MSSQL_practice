@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LINQ_CS_MSSQL_practice")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bb5644d253209d09de541bb84e443c2a86886811")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2020c00723142b39b52c31ccbfefa8d5e87ac0bb")]
 [assembly: System.Reflection.AssemblyProductAttribute("LINQ_CS_MSSQL_practice")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LINQ_CS_MSSQL_practice")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
