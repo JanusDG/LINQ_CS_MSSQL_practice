@@ -2,7 +2,7 @@
 using System;
 using System.Linq;
 using TaskModels;
-
+using System.Globalization;
 
 public class TasksDbContext : DbContext
 {
@@ -21,6 +21,13 @@ public class TasksDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
+
+        modelBuilder.Entity<Task1Number>()
+            .HasAlternateKey(t => t.Value); //  essentially a unique constraint in the database.
+
+        modelBuilder.Entity<Task6Date>()
+            .HasAlternateKey(t => t.Value);
+            
     }
 }
 
@@ -37,6 +44,10 @@ class Program
             {
                 switch (taskNumberInt)
                 {
+                    case 0:
+                        var culture = CultureInfo.GetCultureInfo("en-US");
+                        Console.WriteLine($"Culture Name: {culture.Name}");
+                        break;
                     case 1:
                         using (var task1DbContext = new TasksDbContext())
                         {
@@ -48,7 +59,7 @@ class Program
                                 var existingEntry = task1DbContext.Task1NumbersTable.FirstOrDefault(t => t.Value == i);
                                 if (existingEntry == null)
                                 {
-                                    task1DbContext.Task1NumbersTable.Add(new Task1Number { Value = i });
+                                    task1DbContext.Task1NumbersTable.Add(new Task1Number { Value = i }); // create new instance, because you might need it later
                                     task1DbContext.SaveChanges();
                                 }
 
