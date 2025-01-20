@@ -4,12 +4,7 @@ using TaskSolver.Models;
 
 namespace TaskSolver.Data
 {
-    public class TasksService
-    {
-        // TODO 
-        // Use dependency injection here
-        public readonly TasksDbContext _context = new TasksDbContext();
-    }
+    
     public class TasksDbContext : DbContext
     {
         public DbSet<Task1Number> Task1NumbersTable { get; set; }
