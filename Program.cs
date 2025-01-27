@@ -19,6 +19,7 @@ class Program
             if (taskNumberInt >= 1 && taskNumberInt <= 30)
             {
                 var context = new TasksDbContext();
+                context.Database.EnsureCreated();
                 var tasksService = new LinqTasksService(context);
 
                 switch (taskNumberInt)

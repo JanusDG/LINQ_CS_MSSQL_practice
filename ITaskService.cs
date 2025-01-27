@@ -1,4 +1,4 @@
-public interface ITasksService
+public interface ILinqTasksService
 {
     void DoTask1();
     void DoTask2();

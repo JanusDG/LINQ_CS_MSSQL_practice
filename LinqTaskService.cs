@@ -5,7 +5,7 @@ using TaskSolver.Data;
 
 namespace TaskSolver.Services{
 
-    public class LinqTasksService : ITasksService
+    public class LinqTasksService : ILinqTasksService
     {
 
         public readonly TasksDbContext _context;
@@ -19,8 +19,7 @@ namespace TaskSolver.Services{
         {
             using (_context)
             {
-                _context.Database.EnsureCreated();
-
+                
                 for (int i = 0; i < 10; i++)
                 {
                     // populate with entries if they do not exist
@@ -51,8 +50,7 @@ namespace TaskSolver.Services{
         {
             using (_context)
             {
-                _context.Database.EnsureCreated();
-
+                
                 for (int i = -10; i < 20; i++)
                 {
                     // populate with entries if they do not exist
@@ -83,8 +81,7 @@ namespace TaskSolver.Services{
         {
             using (_context)
             {
-                _context.Database.EnsureCreated();
-
+                
                 for (int i = -10; i < 20; i++)
                 {
                     // populate with entries if they do not exist
@@ -115,8 +112,7 @@ namespace TaskSolver.Services{
         {
             using (_context)
             {
-                _context.Database.EnsureCreated();
-
+                
                 for (int i = 1; i <= 10; i++)
                 {
                     // populate with random amount of each number from 1 to 10
@@ -150,8 +146,7 @@ namespace TaskSolver.Services{
         {
             using (_context)
             {
-                _context.Database.EnsureCreated();
-
+                
                 string alphabet = "abcdefghijklmnopqrstuvwxyz";
                 foreach (char c in alphabet)
                 {
@@ -189,8 +184,7 @@ namespace TaskSolver.Services{
         {
             using (_context)
             {
-                _context.Database.EnsureCreated();
-
+                
                 for (int i = 1; i <= 7; i++)
                 {
                     // populate with first week of Feb 2025
@@ -219,8 +213,7 @@ namespace TaskSolver.Services{
         {
             using (_context)
             {
-                _context.Database.EnsureCreated();
-
+                
                 for (int i = 1; i <= 10; i++)
                 {
                     // populate with random amount of each number from 1 to 10
@@ -258,8 +251,7 @@ namespace TaskSolver.Services{
         {
             using (_context)
             {
-                _context.Database.EnsureCreated();
-
+                
                 string alphabet = "abcdefghijklmnopqrstuvwxyz";
                 Random randomLengthGenerator = new Random();
                 // populate with 3 randomly generated "words"
@@ -302,8 +294,7 @@ namespace TaskSolver.Services{
         {
             using (_context)
             {
-                _context.Database.EnsureCreated();
-
+                
                 for (int i = 78; i < 83; i++)
                 {
                     // populate with entries if they do not exist
@@ -333,8 +324,7 @@ namespace TaskSolver.Services{
         {
             using (_context)
             {
-                _context.Database.EnsureCreated();
-
+                
                 for (int i = 0; i < 10; i++)
                 {
                     // populate with entries if they do not exist
