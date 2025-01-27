@@ -16,7 +16,7 @@ namespace TaskSolver.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(
-                "Server=localhost;Database=Db4Tasks;User Id=SA;Password=&e!dXne};TrustServerCertificate=True;");
+                "Server=localhost;Database=Db4Tasks;User Id=SA;Password=;TrustServerCertificate=True;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
